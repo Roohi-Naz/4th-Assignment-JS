@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Question 1</h1>")
+        function time(){
+            var currentDate =new Date();
+            document.write("Current Date : ",currentDate)
+
+        }
+        time();
+
+
+        document.write("<h1>Question 2</h1>")
+     function greet(){
+        var firstName =prompt("First Name ?", "Roohi")
+        var lastName =prompt("Last Name ?" , "Naz")
+        var fullName = firstName +" "+ lastName
+        document.write("Welcome "+ fullName )
+     }
+     greet();
+
+     document.write("<h1>Question 3</h1>")
+
+        var num1 =prompt("Number 1 to add")
+        var num2 =prompt("Number 2 to add")
+
+
+     function add(a , b){
+            return parseInt(a)+parseInt(b);
+        }
+        document.write(add(num1,num2))
+        document.write(" Addition using Function <br>")
+
+
+
+
+    document.write("<h1>Question 4</h1>")
+    document.write("<h1>CALCULATOR</h1>")
+
+            var numb1 =parseInt(prompt("Number 1 to Calculate"))
+            var numb2 =parseInt(prompt("Number 2 to Calculate"))
+            var operator =prompt("operator to Calculate (+, -, *, /)")
+            function calculate(numb1, numb2, operator) {
+    switch (operator) {
+        case '+':
+            return numb1 + numb2;
+        case '-':
+            return numb1 - numb2;
+        case '*':
+            return numb1 * numb2;
+        case '/':
+            return numb2 !== 0 ? numb1 / numb2 : "Cannot divide by zero";
+        default:
+            return "Invalid operator";
+    }
+}
+var result = calculate(numb1, numb2, operator);
+document.write("Result: " + result);
+
+
+    document.write("<h1>Question 5</h1>")
+
+        var squareNum =parseInt(prompt("Number to square"))
+
+
+     function square(a){
+            return a*a;
+        }
+        document.write(square(squareNum))
+
+
+    document.write("<h1>Question 6</h1>")
+    var factorialNumb = parseInt(prompt("Number to find to factorial"))
+    function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+document.write(factorial(factorialNumb)); 
+
+
+document.write("<h1>Question 7</h1>")
+
+var startNum = parseInt(prompt("First Number to start Counting "))
+var endNum = parseInt(prompt("Last Number to end Counting "))
+
+function counting (start , end){
+    var result = "";
+    for(
+        var i=start ; i<=end ; i++
+    ){
+        result+= i + "<br>"
+    }
+    document.write(result)
+}
+
+counting(startNum,endNum)
+
+document.write("<h1>Question 8</h1>")
+
+var perpendicular = parseFloat(prompt("Enter the perpendicular of the triangle:"));
+var base = parseFloat(prompt("Enter the base of the triangle:"));
+
+function calculateHypotenuse(base, perpendicular) {
+    function calculateSquare(number) {
+        return number * number;
+    }
+
+    let baseSquare = calculateSquare(base);
+    let perpendicularSquare = calculateSquare(perpendicular);
+    let hypotenuseSquare = baseSquare + perpendicularSquare;
+    let hypotenuse = Math.sqrt(hypotenuseSquare);
+
+    return hypotenuse;
+}
+
+var hypotenuse = calculateHypotenuse(base, perpendicular);
+
+document.write("The hypotenuse of the triangle is: " + hypotenuse);
+
+
+
+document.write("<h1>Question 9</h1>")
+document.write("Arguments as value: <br>")
+function area(width, height){
+    return width * height
+}
+document.write(area(5,6) , "<br>")
+
+document.write("Arguments as variable: <br>")
+
+function area(width, height){
+    return width * height
+}
+var x = 7;
+var y = 9;
+document.write(area(x,y), "<br>" )
+
+
+document.write("<h1>Question 10</h1>")
+
+var askPalindrome = prompt("Check palindrome")
+function palindrome(str) {
+
+    const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+   
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    
+    return cleanedStr === reversedStr;
+}
+document.write(palindrome(askPalindrome))
+
+
+document.write("<h1>Question 11</h1>")
+function Capitalize(str) {
+   var words = str.split(' ');
+
+    for (var i = 0; i < words.length; i++) {
+        words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    }
+
+    return words.join(' ');
+}
+
+var exampleString = 'the quick brown fox';
+document.write (Capitalize(exampleString))
+
+document.write("<h1>Question 12</h1>")
+
+function findLongestWord(str) {
+    
+    var words = str.split(' ');
+    var longestWord = '';
+
+    for (var i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i];
+        }
+    }
+    return longestWord;
+}
+
+var exampleStr= 'Web Development Tutorial';
+document.write(findLongestWord(exampleStr))
+
+
+document.write("<h1>Question 13</h1>")
+
+function countOccurrences(str, letter) {
+    var count = 0;
+
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === letter) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+document.write(countOccurrences('JSResourceS.com',"o"))
+
+document.write("<h1>Question 14</h1>")
+
+function calcCircumference(radius){
+    var circumference = 2 * Math.PI * radius
+    document.write("The circumference is of 6 Radius is  " , circumference , "<br>")
+}
+calcCircumference(6);
+
+function calcArea(radius){
+    var area = Math.PI * radius * radius
+    document.write("The area is circle of 6 Radius is  ",area)
+} 
+calcArea(6)
+
+
+    </script>
+</body>
+</html>

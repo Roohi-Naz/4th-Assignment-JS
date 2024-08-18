@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Question 1</h1>")
+var currentDate =new Date();
+document.write("Current Date : ",currentDate)
+
+document.write("<h1>Question 2</h1>")
+var currentDate =new Date();
+var theMonth = currentDate.getMonth()
+var months = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+var currentMonth = months[theMonth];
+alert("Current Month : " + currentMonth);
+document.write("Current Month : ",currentMonth)
+
+
+
+
+document.write("<h1>Question 3</h1>")
+var theDay = currentDate.getDay()
+var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var today = daysOfWeek[theDay];
+var today = today.toString();
+var abr_day = today.slice(0,3)
+document.write("Today is ",abr_day)
+
+document.write("<h1>Question 4</h1>")
+var theDay = currentDate.getDay()
+if (theDay===0 || theDay === 6){
+    document.write("Its a Fun day")
+} else{    
+    document.write("Its a Week day")
+}
+
+document.write("<h1>Question 5</h1>")
+var theDate = currentDate.getDate()
+if (theDate <= 15){
+    document.write("First fifteen days of the month")
+}
+else{
+    document.write("Last days of the month.")
+}
+
+document.write("<h1>Question 6</h1>")
+
+var d1 =new Date("January 1 ,1970");
+var d2 =new Date();
+var msd1 = d1.getTime();
+var msd2 = d2.getTime();
+var msDiff = msd2 - msd1 ;
+document.write("Elapsed Millisecond since January 1 ,1970 : ",msDiff)
+document.write("<br>")
+var d_diff = msDiff / (1000*60)
+document.write("Elapsed Minutes since January 1 ,1970 : " ,d_diff)
+
+
+
+document.write("<h1>Question 7</h1>")
+var theHour = currentDate.getHours()
+if(theHour<=12){
+    document.write("Its AM ")
+}
+else{
+    document.write("Its PM ")
+
+}
+document.write("<h1>Question 8</h1>")
+var laterDate = new Date("December 31 , 2020");
+document.write(laterDate)
+
+document.write("<h1>Question 9</h1>")
+
+var d2 =new Date();
+var d1 =new Date("March 12 ,2024");
+var msd1 = d1.getTime();
+var msd2 = d2.getTime();
+var msDiff = msd2 - msd1 ;
+var d_diff = msDiff / (1000*60*60*24)
+var d_diff = Math.floor(d_diff)
+document.write(d_diff," days Passed since 1 Ramzan 2024")
+
+document.write("<h1>Question 10</h1>")
+var refrenceDate = new Date("December 5 , 2015  22:50:16");
+document.write(refrenceDate , "<br>")
+var date2 = new Date("January 1 , 2015");
+var ms_rdate = refrenceDate.getTime();
+var ms_date2 = date2.getTime();
+var minus_dates = ms_rdate-ms_date2;
+var dates_diff = minus_dates / (1000*60)
+var dates_diff = Math.floor(dates_diff)
+document.write(dates_diff," seconds had Passed since beginning of 2015.")
+
+document.write("<h1>Question 11</h1>")
+var d = new Date();
+
+var currentHours = d.getHours();
+
+d.setHours(currentHours - 1);
+document.write("Current Date : ",currentDate)
+document.write("<br>")
+document.write("1 hour Ago : ",d);
+
+document.write("<h1>Question 12</h1>")
+
+var d = new Date();
+
+var before100 = d.getFullYear();
+
+d.setFullYear(before100 - 100);
+document.write("Current Date : ",currentDate)
+document.write("<br>")
+document.write("100 years Ago : ",d);
+
+document.write("<h1>Question 13</h1>")
+var d = new Date();
+
+var ask = prompt("whats your age?")
+var yr = d.getFullYear() 
+var birth_year = yr - ask
+document.write("Your birth year is ",birth_year)
+
+
+document.write("<h1>Question 14</h1>")
+document.write("<h2>K-ELECTRIC BILL</h2>")
+var costumerName =("Hamid")
+document.write("Costumer Name :",costumerName ,"<br>")
+
+var d = new Date();
+var theMonth = currentDate.getMonth()
+var months = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+var currentMonth = months[theMonth];
+document.write("Current Month : ",currentMonth ,"<br>")
+
+var unitsNumber = 200;
+var charge_per_umit = 35
+document.write("Number of units : ", unitsNumber.toFixed(2) ,"<br>")
+document.write("Charges per unit : ", charge_per_umit.toFixed(2) ,"<br>")
+
+var netAmountPayable = unitsNumber * charge_per_umit
+document.write("Net Amount Payable (within Due Date) : ", netAmountPayable.toFixed(2) ,"<br>")
+
+var lateCharges = 350; 
+document.write("Late Payment Surcharge : ", lateCharges.toFixed(2) ,"<br>")
+
+var grossAmount = netAmountPayable + lateCharges
+document.write("Gross Amount Payable (after Due Date) : ", grossAmount.toFixed(2) ,"<br>")
+
+
+
+
+
+
+    </script>
+</body>
+</html>
